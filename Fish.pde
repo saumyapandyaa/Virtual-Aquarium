@@ -1,44 +1,44 @@
 class Fish {
-  float x, y;
+  float posX, posY;
   float speedX, speedY;
-  int c;
+  int colour;
   float size = 30;
   float tailAngle = 0;
   float tailSpeed;
-  float energy = 100;   // energy level (0–100)
+  float energy_level = 100;   // energy level (0–100)
   boolean isEating = false;
 
-  Fish(float x, float y, int c) {
-    this.x = x;
-    this.y = y;
-    this.c = c;
-    speedX = random(-2, 2);
-    speedY = random(-2, 2);
-    tailSpeed = random(0.1, 0.3);
+  Fish(float posX, float posY, int colour) {
+    this.posX = posX;
+    this.posY = posY;
+    this.colour = colour;
+    speedX = random(-3, 3);
+    speedY = random(-3, 3);
+    tailSpeed = random(0.2, 0.5);
   }
 
   void update(ArrayList<Food> foods) {
     // Slowly reduce energy over time
-    energy -= 0.02;
-    energy = constrain(energy, 0, 100);
+    energy_level -= 0.02;
+    energy_level = constrain(energy_level, 0, 100);
 
     // Tail animation
     tailAngle += tailSpeed;
 
     // Movement speed depends on energy
-    float energyFactor = map(energy, 0, 100, 0.5, 1.5);
+    float energyFactor = map(energy_level, 0, 100, 0.5, 1.5);
 
-    x += speedX * energyFactor;
-    y += speedY * energyFactor;
+    posX += speedX * energyFactor;
+    posY += speedY * energyFactor;
 
     // Bounce off walls
-    if (x < 0 || x > width) speedX *= -1;
-    if (y < 0 || y > height) speedY *= -1;
+    if (posX < 0 || posX > width) speedX *= -1;
+    if (posY < 0 || posY > height) speedY *= -1;
 
     // Avoid mouse (predator effect)
-    float distToMouse = dist(x, y, mouseX, mouseY);
+    float distToMouse = dist(posX, posY, mouseX, mouseY);
     if (distToMouse < 100) {
-      float angle = atan2(y - mouseY, x - mouseX);
+      float angle = atan2(posY - mouseY, posX - mouseX);
       speedX += cos(angle) * 0.5;
       speedY += sin(angle) * 0.5;
     }
@@ -47,7 +47,7 @@ class Fish {
     Food nearest = null;
     float nearestDist = 9999;
     for (Food f : foods) {
-      float d = dist(x, y, f.x, f.y);
+      float d = dist(posX, posY, f.posX, f.posY);
       if (d < nearestDist) {
         nearestDist = d;
         nearest = f;
@@ -55,7 +55,7 @@ class Fish {
     }
 
     if (nearest != null && nearestDist < 200) {
-      float angle = atan2(nearest.y - y, nearest.x - x);
+      float angle = atan2(nearest.posY - posY, nearest.posX - posX);
       speedX += cos(angle) * 0.1;
       speedY += sin(angle) * 0.1;
     }
@@ -63,8 +63,8 @@ class Fish {
     // Check if fish eats food (collision)
     if (nearest != null && nearestDist < 20) {
       nearest.isEaten = true;
-      energy += 25;  // regain energy
-      energy = constrain(energy, 0, 100);
+      energy_level += 25;  // regain energy
+      energy_level = constrain(energy_level, 0, 90);
       isEating = true;
     } else {
       isEating = false;
@@ -77,14 +77,14 @@ class Fish {
 
   void display() {
     pushMatrix();
-    translate(x, y);
+    translate(posX, posY);
 
     // Rotate fish in direction of motion
     float angle = atan2(speedY, speedX);
     rotate(angle);
 
     // Draw fish body
-    fill(c);
+    fill(colour);
     noStroke();
     ellipse(0, 0, size, size / 2);
 
@@ -105,18 +105,18 @@ class Fish {
   void drawEnergyBar() {
     float barWidth = 30;
     float barHeight = 4;
-    float energyRatio = energy / 100.0;
+    float energyRatio = energy_level / 100.0;
 
-    float barX = x - barWidth / 2;
-    float barY = y - size / 1.2;
+    float barX = posX - barWidth / 2;
+    float barY = posY - size / 1.2;
 
     // Background (gray)
     fill(80);
     rect(barX, barY, barWidth, barHeight);
 
     // Foreground (green → red based on energy)
-    if (energy > 50) fill(0, 255, 0);
-    else if (energy > 25) fill(255, 165, 0);
+    if (energy_level > 50) fill(0, 255, 0);
+    else if (energy_level > 25) fill(255, 165, 0);
     else fill(255, 0, 0);
 
     rect(barX, barY, barWidth * energyRatio, barHeight);

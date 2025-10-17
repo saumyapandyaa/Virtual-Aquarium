@@ -10,15 +10,15 @@ class Seaweed {
     baseX = x;
     baseY = y;
     height = random(80, 150);
-    swaySpeed = random(0.01, 0.03);
-    swayAmount = random(10, 25);
+    swaySpeed = random(0.01, 0.05);
+    swayAmount = random(10, 50);
     phase = random(TWO_PI);
     segments = int(random(6, 10));
   }
 
   void display() {
-    stroke(0, 100 + random(-10,10), 0);  // dark green
-    strokeWeight(4);
+    stroke(0, 100 + random(-10,10), 10);  // dark green
+    strokeWeight(3.5);
     noFill();
 
     beginShape();

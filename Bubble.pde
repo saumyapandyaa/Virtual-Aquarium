@@ -7,8 +7,8 @@ class Bubble {
   Bubble(float x, float y) {
     this.x = x;
     this.y = y;
-    size = random(5, 20);    // bubble size
-    speed = random(0.5, 2);  // rising speed
+    size = random(6, 20);    // bubble size
+    speed = random(0.75, 2);  // rising speed
     drift = random(-0.3, 0.3); // sideways drift
   }
 

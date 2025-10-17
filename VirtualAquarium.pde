@@ -33,24 +33,24 @@ void setup() {
   // Create 15 fish with random colors and positions
   for (int i = 0; i < 15; i++) {
     fishes.add(new Fish(random(width), random(height - 100),
-      color(random(50,255), random(50,255), random(50,255))));
+      color(random(100,255), random(50,255), random(75,255))));
   }
 }
 
 void draw() {
   // ----- Background (Day/Night) -----
   if (isDay) {
-    background(135, 206, 250); // Light blue for day
+    background(100, 180, 255); // Light blue for day
   } else {
-    background(10, 10, 50);    // Dark navy for night
+    background(15, 20, 70);    // Dark navy for night
   }
 
   // Optional gradient water effect (looks better)
   drawWaterGradient();
 
   // ----- SEAWEED (draw first, background layer) -----
-  for (Seaweed s : seaweeds) {
-    s.display();
+  for (Seaweed seaweed : seaweeds) {
+    seaweed.display();
   }
 
   // ----- BUBBLES -----
@@ -60,24 +60,24 @@ void draw() {
   }
 
   for (int i = bubbles.size()-1; i >= 0; i--) {
-    Bubble b = bubbles.get(i);
-    b.update();
-    b.display();
-    if (b.isOffScreen()) bubbles.remove(i);
+    Bubble bubble = bubbles.get(i);
+    bubble.update();
+    bubble.display();
+    if (bubble.isOffScreen()) bubbles.remove(i);
   }
 
   // ----- FISH -----
-  for (Fish f : fishes) {
-    f.update(foods);
-    f.display();
+  for (Fish fish : fishes) {
+    fish.update(foods);
+    fish.display();
   }
 
   // ----- FOOD -----
   for (int i = foods.size()-1; i >= 0; i--) {
-    Food fd = foods.get(i);
-    fd.update();
-    fd.display();
-    if (fd.isEaten || fd.y > height) {
+    Food food = foods.get(i);
+    food.update();
+    food.display();
+    if (food.isEaten || food.posY > height) {
       foods.remove(i);
     }
   }
@@ -86,7 +86,7 @@ void draw() {
   fill(255);
   textSize(14);
   textAlign(LEFT);
-  text("Click to drop food • Move mouse to scare fish • Press 'D' to toggle Day/Night", 10, height - 10);
+  text("Click to drop food • Move mouse to scare fish • Press Space to toggle Day/Night", 15, height - 15);
 }
 
 void mousePressed() {
@@ -100,8 +100,8 @@ void mousePressed() {
 }
 
 void keyPressed() {
-  // Toggle between day and night
-  if (key == 'd' || key == 'D') {
+  // Toggle between day and night with spacebar
+  if (key == ' ' || key == ' ') {
     isDay = !isDay;
   }
 }
@@ -113,12 +113,16 @@ void drawWaterGradient() {
     float inter = map(y, 0, height, 0, 1);
     int c1, c2;
     if (isDay) {
-      c1 = color(135, 206, 250); // top light blue
-      c2 = color(0, 100, 180);   // deeper blue bottom
+      c1 = color(100, 180, 255); // bright blue top
+      c2 = color(20, 60, 130);   // deep ocean blue
     } else {
-      c1 = color(10, 10, 50);
-      c2 = color(0, 0, 25);
+      c1 = color(15, 20, 70);    // dark indigo night
+      c2 = color(5, 10, 30);     // very dark blue bottom
     }
+
+
+
+
     stroke(lerpColor(c1, c2, inter));
     line(0, y, width, y);
   }
