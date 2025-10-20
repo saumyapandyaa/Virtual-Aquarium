@@ -73,5 +73,8 @@ Adding a screenshot or animated GIF (e.g., `day-mode.png` and `night-mode.png`) 
 
 https://github.com/user-attachments/assets/41d1cc0f-ae04-485e-ad3e-104e1b4c2181
 
+## Authors
 
-
+Shivam Patel - 100839218
+Saumya Pandya - 100845715
+Rushi Rathod - 100826456
