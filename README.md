@@ -67,10 +67,3 @@ Add a screenshot or animated GIF (e.g., `day-mode.png` and `night-mode.png`) sho
 
 If including the media in a PDF, reference the same filenames so the README and report match.
 
----
-
-## Deliverables for the PDF Report
-- Annotated code snippets illustrating the fish steering logic, bubble particle update, and the day/night gradient
-- Labeled screenshots that connect interactions (feeding, fleeing, lighting toggle) to user experience goals
-- Brief discussion of tunable parameters and how they influence user engagement
-

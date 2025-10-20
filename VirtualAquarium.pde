@@ -1,20 +1,20 @@
 // Virtual Aquarium Simulation
-// Shivam Patel - SOFE 4590 Project
 // Demonstrates real-time animation, interactivity, and object behavior
 
 // --------------------------------------------
 // VIRTUAL AQUARIUM with Fish Behavior
-// Shivam Patel – Interactive Graphics Project
 // Features: real-time animation, user input,
 // 15+ fish, food chasing, predator avoidance,
 // hunger/energy system, bubbles, seaweed, and day/night toggle.
 // --------------------------------------------
 
+// Buckets of entities we update every frame
 ArrayList<Fish> fishes;
 ArrayList<Food> foods;
 ArrayList<Bubble> bubbles;
 ArrayList<Seaweed> seaweeds;
 
+// Simple day/night flag the player can flip
 boolean isDay = true;
 
 void setup() {

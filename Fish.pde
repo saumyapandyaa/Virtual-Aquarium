@@ -1,10 +1,15 @@
 class Fish {
+  // Floating position of the fish within the tank
   float posX, posY;
+  // Current movement velocity, helps determine which way to face
   float speedX, speedY;
+  // Body color so each fish feels distinct
   int colour;
   float size = 30;
+  // Tail swing values used for the wiggling animation
   float tailAngle = 0;
   float tailSpeed;
+  // Simple life bar so we can visualize how hungry the fish is
   float energy_level = 100;   // energy level (0–100)
   boolean isEating = false;
 
@@ -12,6 +17,7 @@ class Fish {
     this.posX = posX;
     this.posY = posY;
     this.colour = colour;
+    // Randomize starting direction so the school spreads out
     speedX = random(-3, 3);
     speedY = random(-3, 3);
     tailSpeed = random(0.2, 0.5);
