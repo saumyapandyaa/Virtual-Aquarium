@@ -60,17 +60,21 @@ Key parameters (tweak in code for experimentation):
 ---
 
 ## Example Output
-Add a screenshot or animated GIF (e.g., `day-mode.png` and `night-mode.png`) showing:
+Adding a screenshot or animated GIF (e.g., `day-mode.png` and `night-mode.png`) showing:
+<img width="797" height="619" alt="day-mood" src="https://github.com/user-attachments/assets/af288f4f-4cf1-4f87-b240-a31b23b002a7" />
+<img width="795" height="623" alt="night-mood" src="https://github.com/user-attachments/assets/880dd294-4860-4b22-ae75-ddc7e89d3682" />
 - Fish chasing food during the day
 - Night mode gradient with glowing fish outlines
 - HUD instructions at the bottom of the screen
-
-If including the media in a PDF, reference the same filenames so the README and report match.
-
+- 
 ---
 
-## Deliverables for the PDF Report
-- Annotated code snippets illustrating the fish steering logic, bubble particle update, and the day/night gradient
-- Labeled screenshots that connect interactions (feeding, fleeing, lighting toggle) to user experience goals
-- Brief discussion of tunable parameters and how they influence user engagement
+## Demo
 
+https://github.com/user-attachments/assets/41d1cc0f-ae04-485e-ad3e-104e1b4c2181
+
+## Authors
+
+- Shivam Patel - 100839218
+- Saumya Pandya - 100845715
+- Rushi Rathod - 100826456
