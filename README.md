@@ -69,3 +69,9 @@ Adding a screenshot or animated GIF (e.g., `day-mode.png` and `night-mode.png`) 
 - 
 ---
 
+## Demo
+
+https://github.com/user-attachments/assets/41d1cc0f-ae04-485e-ad3e-104e1b4c2181
+
+
+
