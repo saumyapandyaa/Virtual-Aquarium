@@ -3,6 +3,12 @@ An interactive Processing sketch that simulates a lively aquarium ecosystem with
 
 ---
 
+## Demo
+
+https://github.com/user-attachments/assets/41d1cc0f-ae04-485e-ad3e-104e1b4c2181
+
+---
+
 ## Highlights
 - 15+ autonomous fish with animated tails, energy bars, and hunger-driven steering
 - Click-to-drop food pellets that sink, disperse bubbles, and can be eaten to restore energy
@@ -66,21 +72,10 @@ Adding a screenshot or animated GIF (e.g., `day-mode.png` and `night-mode.png`) 
 - Fish chasing food during the day
 - Night mode gradient with glowing fish outlines
 - HUD instructions at the bottom of the screen
-<<<<<<< HEAD
-
-If including the media in a PDF, reference the same filenames so the README and report match.
-
-=======
-- 
 ---
-
-## Demo
-
-https://github.com/user-attachments/assets/41d1cc0f-ae04-485e-ad3e-104e1b4c2181
 
 ## Authors
 
 - Shivam Patel - 100839218
 - Saumya Pandya - 100845715
 - Rushi Rathod - 100826456
->>>>>>> 62204fbc48198a5844d950c9364abc9baab16ca8
