@@ -72,7 +72,7 @@ Adding a screenshot or animated GIF (e.g., `day-mode.png` and `night-mode.png`) 
 - Fish chasing food during the day
 - Night mode gradient with glowing fish outlines
 - HUD instructions at the bottom of the screen
-- 
+  
 ---
 
 ## Authors
