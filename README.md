@@ -60,7 +60,9 @@ Key parameters (tweak in code for experimentation):
 ---
 
 ## Example Output
-Add a screenshot or animated GIF (e.g., `day-mode.png` and `night-mode.png`) showing:
+Adding a screenshot or animated GIF (e.g., `day-mode.png` and `night-mode.png`) showing:
+<img width="797" height="619" alt="day-mood" src="https://github.com/user-attachments/assets/af288f4f-4cf1-4f87-b240-a31b23b002a7" />
+<img width="795" height="623" alt="night-mood" src="https://github.com/user-attachments/assets/880dd294-4860-4b22-ae75-ddc7e89d3682" />
 - Fish chasing food during the day
 - Night mode gradient with glowing fish outlines
 - HUD instructions at the bottom of the screen
