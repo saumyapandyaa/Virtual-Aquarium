@@ -1,14 +1,18 @@
 class Seaweed {
+  // Anchor position on the aquarium floor
   float baseX, baseY;
+  // Height and bending personality of this strand
   float height;
   float swaySpeed;
   float swayAmount;
+  // Phase offset lets each plant sway on its own rhythm
   float phase;
   int segments;
 
   Seaweed(float x, float y) {
     baseX = x;
     baseY = y;
+    // Randomize appearance so the forest feels organic
     height = random(80, 150);
     swaySpeed = random(0.01, 0.05);
     swayAmount = random(10, 50);
