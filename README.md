@@ -66,13 +66,11 @@ Adding a screenshot or animated GIF (e.g., `day-mode.png` and `night-mode.png`) 
 - Fish chasing food during the day
 - Night mode gradient with glowing fish outlines
 - HUD instructions at the bottom of the screen
-
-If including the media in a PDF, reference the same filenames so the README and report match.
-
+- 
 ---
 
-## Deliverables for the PDF Report
-- Annotated code snippets illustrating the fish steering logic, bubble particle update, and the day/night gradient
-- Labeled screenshots that connect interactions (feeding, fleeing, lighting toggle) to user experience goals
-- Brief discussion of tunable parameters and how they influence user engagement
+https://github.com/user-attachments/assets/efd18bb5-8938-4cda-bc94-289ea7745beb
 
+
+
+## Demo video
